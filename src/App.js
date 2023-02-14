@@ -2,7 +2,7 @@
 import React from "react";
 
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Navbar, LandingPage, Header } from './components';
+import { Navbar, LandingPage, Header, Socials } from './components';
 
 import './App.css';
 
@@ -13,8 +13,7 @@ function App() {
       <Navbar />
       <LandingPage />
     </Header>
-    content
-    content
+    <Socials />
   </Router>
   );
 }

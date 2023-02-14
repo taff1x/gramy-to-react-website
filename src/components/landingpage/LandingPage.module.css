@@ -65,14 +65,14 @@
   width: 100%;
 }
 
-h1 {
+.content h1 {
   color: white;
   font-size: 50px;
   font-weight: 800;
   line-height: 65px;
 }
 
-p {
+.content p {
   color: var(--color-text);
   font-size: 20px;
   line-height: 27px;
@@ -99,13 +99,13 @@ p {
   transform: rotate(180deg);
 }
 
-@media screen and (min-width: 2400px) {
+@media only screen and (min-width: 2400px) {
   .container {
     max-width: 1800px;
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media only screen and (max-width: 1400px) {
   .container {
     flex-direction: column;
   }
@@ -118,30 +118,30 @@ p {
     margin-left: 0;
   }
  
-  h1 {
+  .content h1 {
     font-size: 46px;
     line-height: 54px;
   }
 }
 
-@media screen and (max-width: 650px) {
-  h1 {
+@media only screen and (max-width: 650px) {
+  .content h1 {
     font-size: 36px;
     line-height: 42px;
   }
 
-  p {
+  .content p {
     font-size: 16px;
     line-height: 24px;
   }
 }
 
-@media screen and (max-width: 490px) {
+@media only screen and (max-width: 490px) {
   .container {
     padding: 2rem 2rem;
   }
 
-  p {
+  .content p {
     font-size: 14px;
     line-height: 24px;
   }
