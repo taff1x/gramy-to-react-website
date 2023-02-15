@@ -94,7 +94,7 @@
 
 .waves {
   fill: var(--color-bg);
-  height: 70px;
+  height: 80px;
   overflow: hidden;
   transform: rotate(180deg);
 }
