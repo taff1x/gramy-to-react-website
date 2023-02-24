@@ -6,16 +6,21 @@ import { CardFlipper } from '../../components';
 import styles from "./PersonCard.module.css";
 
 const CardFront = ({ name, imgUrl, note, handleFlip, handleFadeIn }) => {
+  
   return (
     // FRONT OF THE CARD
     <div className={styles["person"]}>
       <figure>
         <figcaption>{name}</figcaption>
-        <div className={`${styles["img__container"]} ${styles["fade-in-out"]}`}>
+        <div className={styles["img__container"]}>
           <img className={styles["img"]} src={imgUrl} alt={name} />
         </div>
       </figure>
-      <p>{note}</p>
+      <p>{note.map( (skill, index, arr) => (
+        <>
+          <span key={index}>#</span>{skill}{index !== arr.length-1 ? ' ' : ''}   
+        </>    
+      ))}</p>
       <button onClick={ () => { handleFlip() ; handleFadeIn(1)} }>
         Dowiedz się więcej
       </button>
@@ -30,12 +35,16 @@ const CardBack = ({ name, imgUrl, note, fullNote, handleFlip, handleFadeIn, fade
     <div className={`${styles["person"]} ${styles["back"]}`}>
       <figure>
         <figcaption>{name}</figcaption>
-        <div className={`${styles["img__container"]} ${styles["fade-in-out"]}`}>
+        <div className={styles["img__container"]}>
           <img className={styles["img"]} src={imgUrl} alt={name} />
           <p style={{ opacity: fadeIn, transitionDuration: fadeIn ? `${2}s` : `${0}s` }}>{fullNote}</p>
         </div>
       </figure>
-      <p>{note}</p>
+      <p>{note.map( (skill, index, arr) => (
+        <>
+          <span key={index}>#</span>{skill}{index !== arr.length-1 ? ' ' : ''}   
+        </>      
+      ))}</p>
       <button onClick={() => { handleFlip() ; handleFadeIn(0) }}>
         Wróć
       </button>

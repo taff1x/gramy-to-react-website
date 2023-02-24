@@ -1,33 +1,38 @@
 [
-    {
-      "name": "Mario",
-      "imgUrl": "https://picsum.photos/id/237/200/300",
-      "note": "#gitara #trąbka #wokal",
-      "fullNote": "Jako doświadczony gitarzysta, wokalista i trębacz, posiadam wieloletnie doświadczenie w występach na żywo, nagrywaniu studyjnym oraz komponowaniu muzyki. Posiadam również umiejętność improwizacji i adaptacji do różnych stylów muzycznych. Współpracowałem z wieloma artystami i zespołami, co pozwoliło mi na rozwinięcie swoich"
-    },
-    {
-      "name": "Emma",
-      "imgUrl": "https://picsum.photos/id/238/200/300",
-      "note": "#piano #wokal",
-      "fullNote": "Jako wykwalifikowana pianistka i wokalistka, zdobyłam doświadczenie w różnych stylach muzycznych, w tym jazzie, klasycznej muzyce i popie. Mam zdolność do pracy z zespołem i improwizacji w czasie występów na żywo, a także nagrywania studyjnego. Moje występy charakteryzują się eleganckim stylem i wysokim poziomem artystycznym."
-    },
-    {
-      "name": "David",
-      "imgUrl": "https://picsum.photos/id/239/200/300",
-      "note": "#gitara #perkusja",
-      "fullNote": "Jako gitarzysta i perkusista, zdobyłem doświadczenie w grze w różnych stylach muzycznych, w tym rocku, bluesie i jazzie. Mam umiejętność pracy z zespołem i improwizacji w czasie występów na żywo, a także nagrywania studyjnego. Moje występy charakteryzują się energicznym stylem i silnym przekazem emocjonalnym."
-    },
-    {
-      "name": "Sara",
-      "imgUrl": "https://picsum.photos/id/240/200/300",
-      "note": "#skrzypce #altówka #wokal",
-      "fullNote": "Jako skrzypek, altowiolista i wokalistka, zdobyłam doświadczenie w różnych stylach muzycznych, w tym muzyce klasycznej, jazzie i folkowej. Mam umiejętność pracy z zespołem i improwizacji w czasie występów na żywo, a także nagrywania studyjnego. Moje występy charakteryzują się pięknym brzmieniem i eleganckim stylem."
-    },
-    {
-      "name": "John",
-      "imgUrl": "https://picsum.photos/id/241/200/300",
-      "note": "#bas #gitara #perkusja",
-      "fullNote": "Jako basista, gitarzysta i perkusista, zdobyłem doświadczenie w różnych stylach muzycznych, w tym rocku, bluesie i funk. Mam umiejętność pracy z zespołem i improwizacji w czasie występów na żywo, a także nagrywania studyjnego. Moje występy charakteryzują się dynamicznym stylem i silnym przekazem emocjonalnym."
-    }
+  {
+    "name": "Dawid",
+    "imgUrl": "./img/Dawid.png",
+    "note": ["perkusja"],
+    "fullNote": "Dawid to nasz perkusista i mistrz rytmu. Współpracując z nim poczujesz, jak twoja muzyka zaczyna żyć. Niezależnie od gatunku, w którym się poruszamy, Dawid zawsze ma pomysł na to, jak rytmicznie podkreślić i wzbogacić każdy utwór. Poza sceną Dawid jest spokojnym i miłym człowiekiem, ale wystarczy, że weźmie w ręce pałki, a zaczyna dziać się magia."
+  },
+  {
+    "name": "Marcin",
+    "imgUrl": "./img/Marcin.png",
+    "note": ["gitara basowa"],
+    "fullNote": "Marcin jest naszym basistą i charyzmatycznym liderem zespołu. To on wprowadza nas w nastrój i zawsze ma pomysł na to, jak sprawić, żeby nasza muzyka brzmiała wyjątkowo. Znają go wszystkie dziewczyny z okolicy, ale jego serce jest już zajęte. Niezależnie od tego, czy grasz z nim na scenie czy po prostu gadacie na luzie, zawsze masz poczucie, że jesteś w dobrych rękach."
+  },
+  {
+    "name": "Mariusz",
+    "imgUrl": "./img/Mariusz.png",
+    "note": ["gitara", "trąbka", "wokal"],
+    "fullNote": "Mariusz to nasz multiinstrumentalista i wokalista, który potrafi wszystko: od jazzu przez rock po klasyczną muzykę. To dzięki niemu nasza muzyka nabiera jeszcze większego rozmachu i różnorodności. Mariusz jest niesamowicie kreatywny i zawsze ma pomysł na to, jak urozmaicić nasze występy. Poza sceną Mariusz jest ciepłym i serdecznym człowiekiem, który zawsze potrafi rozśmieszyć swoim poczuciem humoru."
+  },
+  {
+    "name": "Michał",
+    "imgUrl": "./img/Michal.png",
+    "note": ["sax alt", "sax tenor"],
+    "fullNote": "Michał to nasz saksofonista i multiinstrumentalista, który potrafi zagrać na wszystkim: od jazzu po blues i rock. Z jego solówkami nasza muzyka nabiera nowych barw i dynamiki. Michał jest bardzo kreatywnym muzykiem i zawsze stara się wnieść coś nowego do naszej muzyki. Poza sceną jest skromnym i przyjaznym człowiekiem, który zawsze potrafi nas rozśmieszyć"
+  },
+  {
+    "name": "Ola",
+    "imgUrl": "./img/Ola.png",
+    "note": ["wokal","gitara","flet"],
+    "fullNote": "Jako wykwalifikowana pianistka i wokalistka, zdobyłam doświadczenie w różnych stylach muzycznych, w tym jazzie, klasycznej muzyce i popie. Mam zdolność do pracy z zespołem i improwizacji w czasie występów na żywo, a także nagrywania studyjnego. Moje występy charakteryzują się eleganckim stylem i wysokim poziomem artystycznym."
+  },
+  {
+    "name": "Robert",
+    "imgUrl": "./img/Robert.png",
+    "note": ["klawisze", "sax tenor"],
+    "fullNote": "Robert to nasz klawiszowiec i saksofonista, który potrafi zagrać każdy utwór w różnych stylach muzycznych. Jego solówki na saksofonie są pełne emocji i energii, a gra na klawiszach nadaje naszej muzyce niepowtarzalny klimat. Poza sceną Robert jest zabawnym i sympatycznym człowiekiem, który zawsze potrafi rozśmieszyć swoim poczuciem humoru."
+  }
 ]
-  

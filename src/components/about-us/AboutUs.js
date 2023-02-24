@@ -6,10 +6,10 @@ const AboutUs = () => {
   return (
     <div className={styles["container"]}>
       {
-        musicians.map( musician => 
+        musicians.map( (musician, key) => 
           (
             <PersonCard
-              key={musician.name}
+              key={key}
               name={musician.name}
               imgUrl={musician.imgUrl}
               note={musician.note}

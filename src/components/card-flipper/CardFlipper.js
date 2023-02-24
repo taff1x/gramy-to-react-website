@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import styles from "./CardFlipper.module.css";
 
-const CardFlipper = ({ cardStyle, isFlipped, flipDirection, flipBackAndForth, children }) => {
+const CardFlipper = ({ cardStyle, isFlipped, flipDirection, flipBackAndForth, timeFlipForward, timeFlipBackward, children }) => {
   
   const getRotation = () => {  
     return {
@@ -16,10 +16,12 @@ const CardFlipper = ({ cardStyle, isFlipped, flipDirection, flipBackAndForth, ch
     back: {
       position: isFlipped ? "relative" : "absolute",
       transform: `${flipDirection === 'horizontal' ? 'rotateY' : 'rotateX'}(${getRotation().back}deg)`,
+      transition: `${timeFlipBackward}s`
     },
     front: {
       position: isFlipped ? "absolute" : "relative",
       transform: `${flipDirection === 'horizontal' ? 'rotateY' : 'rotateX'}(${getRotation().front}deg)`,
+      transition: `${timeFlipForward}s`
     },
   };
 
@@ -42,6 +44,8 @@ CardFlipper.defaultProps = {
   flipDirection: 'horizontal',
   isFlipped: false,
   flipBackAndForth: true,
+  timeFlipForward: 1,
+  timeFlipBackward: 1,
 };
 
 CardFlipper.propTypes = {
@@ -49,6 +53,8 @@ CardFlipper.propTypes = {
   isFlipped: PropTypes.bool,
   flipDirection: PropTypes.bool,
   flipBackAndForth: PropTypes.bool,
+  timeFlipForward: PropTypes.number,
+  timeFlipBackward: PropTypes.number,
 };
 
 export default CardFlipper
