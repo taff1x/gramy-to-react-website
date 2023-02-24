@@ -35,34 +35,43 @@
 }
 
 .image__frame {
-  background-color: var(--color-bg);
+  /* background: var(--gradient-card); */
   border-radius: 40px;
   overflow: hidden;
   padding: .5rem .5rem;
   position: relative;
-}
-
-.image__frame:before {
-  border-radius: inherit;
-  box-shadow: inset 0 0 20px 30px var(--color-bg);
-  content: '';
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
   z-index: 1;
 }
 
-.image {
+.image__frame:before {
+  background: var(--gradient-text) border-box; 
+  border: 8px solid transparent;
   border-radius: inherit;
+  bottom: 0;
+  content: "";
+  left: 0;
+  -webkit-mask: 
+    conic-gradient(from -90deg at 5rem 5rem, white 25%, #0000 0) 0 0 / calc(100% - 5rem) calc(100% - 5rem) border-box,
+    conic-gradient(white 0 0) padding-box;
+  mask:
+    conic-gradient(from -90deg at 5rem 5rem, white 25%, #0000 0) 0 0 / calc(100% - 5rem) calc(100% - 5rem) border-box,
+    conic-gradient(white 0 0) padding-box;
+  -webkit-mask-composite: source-out;
+  mask-composite: exclude;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.image {
+  /* border-radius: inherit; */
   /* filter: grayscale(100%); */
   height: auto;
   max-width: 100%;
   /* min-width: 350px; */
-  mix-blend-mode: normal;
-  width: 100%;
+  /* mix-blend-mode: normal; */
+  /* width: 100%; */
 }
 
 .content h1 {

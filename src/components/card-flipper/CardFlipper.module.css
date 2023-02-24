@@ -1,0 +1,20 @@
+.card {
+    perspective: 100rem;
+}
+  
+.flip {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+  
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    width: 100%;
+}

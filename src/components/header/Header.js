@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './Header.module.css'
 
-export const Header = ({ children }) => {
+const Header = ({ children }) => {
   return (
     <header className={styles['bg--gradient']}>
         {children}
@@ -11,3 +11,4 @@ export const Header = ({ children }) => {
 }
 
 export default Header;
+

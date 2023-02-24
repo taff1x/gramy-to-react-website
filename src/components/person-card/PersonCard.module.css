@@ -1,17 +1,27 @@
 .person {
     align-items: center;
-    background-color: var(--color-decor);
+    /* background: var(--gradient-card); */
+    background:-moz-radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%);
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%);
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%);
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%);
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%);
+    background-color: #042c54;
     border-radius: 20px;
     box-shadow: 0 3px 7px rgba(255,255,255,0.5);
+    cursor: pointer;
     display: flex;
     flex-flow: column nowrap;
-    gap: 1rem;
+    gap: 1em;
     justify-content: center;
-    min-width: 400px;
     padding: 1rem 0;
     position: relative;
-
-  }
+    width: 100%;
+}
   
 .person:after {
     border-radius: 20px;
@@ -31,10 +41,102 @@
     opacity: 1;
 }
 
-.person__img {
-    border-radius: inherit;
+.person figure {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.person figcaption {
+    color: white;
+    font-size: 2.2em;
+    padding-bottom: 0.25em;
+}
+
+.person .img__container {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 95%;
+}
+
+.person .img {
+    min-width: 250px;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+}
+
+.person:hover .img{
+    transform: scale(1.5);
+    transform-origin: top left;
+}
+
+.person button {
+    background: #FF4820;
+    border: 4px solid #FF4820;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    outline: none;
+    padding: 0.5rem 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.person button:hover{
+    background: transparent;
+    transform: scale(1.1);
+}
+
+.person p {
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+.back .img {
+    filter: grayscale() blur(5px);
+}
+
+.back .img__container p {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    left: 0;
+    padding: 1em 1em;
+    position: absolute;
+    top: 0;
+    transition-property: opacity;
+    transition-timing-function: ease-in;
+    /* transition-duration: 1s; react conntrolled */
+    width: 100%;
+    z-index: 2;
+}
+
+.back .img__container:before,
+.back .img__container:after {
+    content: '';
     display: block;
-    min-width: 90%;
-    /* gap: 2rem; */
-    /* padding: 0 2rem; */
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.back .img__container:after {
+    background: hotpink;
+    mix-blend-mode: multiply;
+  }
+  
+.back .img__container:before {
+    background: navy;
+    mix-blend-mode: lighten;
 }

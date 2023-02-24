@@ -4,6 +4,8 @@ import { Twirl as Hamburger } from 'hamburger-react'
 import { ReactComponent as Logo } from '../../assets/icons/logo.svg'
 
 import styles from "./Navbar.module.css"
+import classNames from 'classnames/bind';
+let cx = classNames.bind(styles);
 
 const Navbar = () => {
 
@@ -24,19 +26,19 @@ const Navbar = () => {
         <div className={styles["menu-icon"]} onClick={handleShowNavbar}>
           <Hamburger color="white" />
         </div>
-        <div className={ showNavbar ? `${styles["nav__links"]} ${styles["active"]}` : styles["nav__links"]}>
+        <div className={ cx("nav__links" , { "active" : showNavbar }) }>
           <ul>
             <li className={styles["nav__links--about"]}>
-              <NavLink to="/about" className={({isActive}) => (isActive ? `${styles["nav__links--grow-up"]} ${styles["active"]}` : styles["nav__links--grow-up"])}>o nas</NavLink>
+              <NavLink to="/about" className={({isActive}) => cx("nav__links--grow-up" ,  {"active" : isActive}) }>o nas</NavLink>
             </li>
             <li className={styles["nav__links--gallery"]}>
-              <NavLink to="/gallery" className={({isActive}) => (isActive ? `${styles["nav__links--grow-up"]} ${styles["active"]}` : styles["nav__links--grow-up"])}>galeria</NavLink>
+              <NavLink to="/gallery" className={({isActive}) => cx("nav__links--grow-up" , {"active" : isActive}) }>galeria</NavLink>
             </li>
             <li className={styles["nav__links--videos"]}>
-              <NavLink to="/videos" className={({isActive}) => (isActive ? `${styles["nav__links--grow-up"]} ${styles["active"]}` : styles["nav__links--grow-up"])}>wideo</NavLink>
+              <NavLink to="/videos" className={({isActive}) => cx("nav__links--grow-up" , {"active" : isActive}) }>wideo</NavLink>
             </li>
             <li className={styles["nav__links--contact"]}>
-              <NavLink to="/contact" className={({isActive}) => (isActive ? `${styles["nav__links--grow-up"]} ${styles["active"]}` : styles["nav__links--grow-up"])}>kontakt</NavLink>
+              <NavLink to="/contact" className={({isActive}) => cx("nav__links--grow-up" , {"active" : isActive}) }>kontakt</NavLink>
             </li>
           </ul>
         </div>

@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Mario",
+      "imgUrl": "https://picsum.photos/id/237/200/300",
+      "note": "#gitara #trąbka #wokal",
+      "fullNote": "Jako doświadczony gitarzysta, wokalista i trębacz, posiadam wieloletnie doświadczenie w występach na żywo, nagrywaniu studyjnym oraz komponowaniu muzyki. Posiadam również umiejętność improwizacji i adaptacji do różnych stylów muzycznych. Współpracowałem z wieloma artystami i zespołami, co pozwoliło mi na rozwinięcie swoich"
+    },
+    {
+      "name": "Emma",
+      "imgUrl": "https://picsum.photos/id/238/200/300",
+      "note": "#piano #wokal",
+      "fullNote": "Jako wykwalifikowana pianistka i wokalistka, zdobyłam doświadczenie w różnych stylach muzycznych, w tym jazzie, klasycznej muzyce i popie. Mam zdolność do pracy z zespołem i improwizacji w czasie występów na żywo, a także nagrywania studyjnego. Moje występy charakteryzują się eleganckim stylem i wysokim poziomem artystycznym."
+    },
+    {
+      "name": "David",
+      "imgUrl": "https://picsum.photos/id/239/200/300",
+      "note": "#gitara #perkusja",
+      "fullNote": "Jako gitarzysta i perkusista, zdobyłem doświadczenie w grze w różnych stylach muzycznych, w tym rocku, bluesie i jazzie. Mam umiejętność pracy z zespołem i improwizacji w czasie występów na żywo, a także nagrywania studyjnego. Moje występy charakteryzują się energicznym stylem i silnym przekazem emocjonalnym."
+    },
+    {
+      "name": "Sara",
+      "imgUrl": "https://picsum.photos/id/240/200/300",
+      "note": "#skrzypce #altówka #wokal",
+      "fullNote": "Jako skrzypek, altowiolista i wokalistka, zdobyłam doświadczenie w różnych stylach muzycznych, w tym muzyce klasycznej, jazzie i folkowej. Mam umiejętność pracy z zespołem i improwizacji w czasie występów na żywo, a także nagrywania studyjnego. Moje występy charakteryzują się pięknym brzmieniem i eleganckim stylem."
+    },
+    {
+      "name": "John",
+      "imgUrl": "https://picsum.photos/id/241/200/300",
+      "note": "#bas #gitara #perkusja",
+      "fullNote": "Jako basista, gitarzysta i perkusista, zdobyłem doświadczenie w różnych stylach muzycznych, w tym rocku, bluesie i funk. Mam umiejętność pracy z zespołem i improwizacji w czasie występów na żywo, a także nagrywania studyjnego. Moje występy charakteryzują się dynamicznym stylem i silnym przekazem emocjonalnym."
+    }
+]
+  

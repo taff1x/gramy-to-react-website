@@ -4,3 +4,4 @@ export { default as Header } from './header/Header';
 export { default as Socials } from './socials/Socials';
 export { default as AboutUs } from './about-us/AboutUs';
 export { default as PersonCard } from './person-card/PersonCard';
+export { default as CardFlipper } from './card-flipper/CardFlipper';
