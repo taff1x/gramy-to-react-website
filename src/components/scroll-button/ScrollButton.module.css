@@ -1,0 +1,13 @@
+.scroll-btn {
+    background-color: var(--color-decor);
+    border: none;
+    border-radius: 10px;
+    bottom: 20px;
+    cursor: pointer;
+    display: none;
+    outline: none;
+    padding: 15px;
+    position: fixed;
+    right: 20px;
+    z-index: 10;
+}

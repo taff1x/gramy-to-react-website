@@ -17,9 +17,9 @@ const CardFront = ({ name, imgUrl, note, handleFlip, handleFadeIn }) => {
         </div>
       </figure>
       <p>{note.map( (skill, index, arr) => (
-        <>
-          <span key={index}>#</span>{skill}{index !== arr.length-1 ? ' ' : ''}   
-        </>    
+        <React.Fragment key={index}>
+          <span>#</span>{skill}{index !== arr.length-1 ? ' ' : ''}   
+        </React.Fragment>    
       ))}</p>
       <button onClick={ () => { handleFlip() ; handleFadeIn(1)} }>
         Dowiedz się więcej
@@ -41,9 +41,9 @@ const CardBack = ({ name, imgUrl, note, fullNote, handleFlip, handleFadeIn, fade
         </div>
       </figure>
       <p>{note.map( (skill, index, arr) => (
-        <>
-          <span key={index}>#</span>{skill}{index !== arr.length-1 ? ' ' : ''}   
-        </>      
+        <React.Fragment key={index}>
+          <span>#</span>{skill}{index !== arr.length-1 ? ' ' : ''}
+        </React.Fragment>     
       ))}</p>
       <button onClick={() => { handleFlip() ; handleFadeIn(0) }}>
         Wróć

@@ -51,10 +51,10 @@ CardFlipper.defaultProps = {
 CardFlipper.propTypes = {
   children: PropTypes.arrayOf(PropTypes.node).isRequired,
   isFlipped: PropTypes.bool,
-  flipDirection: PropTypes.bool,
+  flipDirection: PropTypes.string,
   flipBackAndForth: PropTypes.bool,
   timeFlipForward: PropTypes.number,
   timeFlipBackward: PropTypes.number,
 };
 
-export default CardFlipper
+export default CardFlipper;

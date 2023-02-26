@@ -3,19 +3,26 @@ import musicians from "../../data/musicians.json"
 import styles from "./AboutUs.module.css";
 
 const AboutUs = () => {
+
+  const image = (imgUrl) => {
+    return require(`./../../${imgUrl}`);
+  }
+
   return (
     <div className={styles["container"]}>
       {
-        musicians.map( (musician, key) => 
-          (
+        musicians.map( (musician) => {
+          return (
             <PersonCard
-              key={key}
+              key={musician.id}
               name={musician.name}
-              imgUrl={musician.imgUrl}
+              imgUrl={image(musician.imgUrl)}
               note={musician.note}
               fullNote={musician.fullNote}
             />
           )
+        }
+          
         ) 
       }
     </div>

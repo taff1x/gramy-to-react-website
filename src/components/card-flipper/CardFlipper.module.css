@@ -15,6 +15,5 @@
     left: 0;
     top: 0;
     transform-style: preserve-3d;
-    transition: transform 0.8s;
     width: 100%;
 }

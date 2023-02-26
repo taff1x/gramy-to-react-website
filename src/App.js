@@ -2,7 +2,7 @@
 import React from "react";
 
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Navbar, LandingPage, Header, Socials, AboutUs } from './components';
+import { Navbar, LandingPage, Header, Socials, AboutUs, ScrollButton } from './components';
 
 import './App.css';
 
@@ -15,6 +15,7 @@ function App() {
     </Header>
     <Socials />
     <AboutUs />
+    <ScrollButton />
   </Router>
   );
 }
