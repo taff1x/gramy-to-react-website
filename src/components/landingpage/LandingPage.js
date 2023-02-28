@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { ReactComponent as Waves } from '../../assets/img/waves.svg'
-import { ReactComponent as Blob } from '../../assets/img/blob.svg'
-import band from '../../assets/img/gt-landing-transparent.png'
+import { ReactComponent as Waves } from '../../assets/img/landing/waves.svg'
+import { ReactComponent as Blob } from '../../assets/img/landing/blob.svg'
+import band from '../../assets/img/landing/gt-landing-transparent.png'
 
 import styles from './LandingPage.module.css'
 
