@@ -6,3 +6,5 @@ export { default as AboutUs } from './about-us/AboutUs';
 export { default as PersonCard } from './person-card/PersonCard';
 export { default as CardFlipper } from './card-flipper/CardFlipper';
 export { default as ScrollButton } from './scroll-button/ScrollButton';
+export { default as Carousel } from './carousel/Carousel.js'
+export { default as Gallery } from './gallery/Gallery.js'

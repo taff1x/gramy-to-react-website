@@ -29,7 +29,11 @@ const ScrollButton = () => {
   };
     
   return (
-    <button className={styles['scroll-btn']} style={{display: visible ? 'inline' : 'none'}} onClick={scrollToTop}>
+    <button
+      className={styles['scroll-btn']}
+      style={{display: visible ? 'inline' : 'none'}}
+      onClick={scrollToTop}
+    >
       <FontAwesomeIcon icon={faCircleArrowUp} size="2x" />
     </button>
   );
