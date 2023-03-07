@@ -25,7 +25,7 @@ const Carousel = ({
     calculateAutoPlayDuration(autoPlayInterval, timeSliding)
   );
 
-  // safety first before 1st render
+  // safety first -> before 1st render for initialization of autoPlayDuration
   function calculateAutoPlayDuration(autoPlayInterval, timeSliding) {
     return autoPlayInterval < timeSliding ? timeSliding : autoPlayInterval;
   }
