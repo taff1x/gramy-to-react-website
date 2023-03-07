@@ -2,28 +2,55 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 
 import styles from "./Carousel.module.css";
 
-const Carousel = ({ slides, carouselStyle, slideStyle, timeSliding, slidingFunction }) => {
+const Carousel = ({
+  slides,
+  carouselStyle,
+  slideStyle,
+  timeSliding,
+  slidingFunction,
+  autoPlayStart,
+  autoPlayReverse,
+  autoPlayInterval
+}) => {
   const numItems = slides.length;
 
   let ref = useRef(null);
 
   const [pos, setPos] = useState(0);
+  const [slideNo, setSlideNo] = useState(1);
   const [swiped, setSwiped] = useState("");
   const [time, setTime] = useState(timeSliding);
-  const [play, setPlay] = useState(true);
+  const [play, setPlay] = useState(autoPlayStart);
+  const [autoPlayDuration, setAutoPlayDuration] = useState(() =>
+    calculateAutoPlayDuration(autoPlayInterval, timeSliding)
+  );
 
+  // safety first before 1st render
+  function calculateAutoPlayDuration(autoPlayInterval, timeSliding) {
+    return autoPlayInterval < timeSliding ? timeSliding : autoPlayInterval;
+  }
+
+  // check play duration if changed during life of the component
   useEffect(() => {
-    if (swiped) {
-      const timer = setTimeout(() => {
-        const newPos = swiped === "left" ? 0 : numItems - 1;
-        setTime(0);
-        setPos(newPos);
-      }, time * 1000);
+    const newAutoPlayDuration = calculateAutoPlayDuration(
+      autoPlayInterval,
+      timeSliding
+    );
+    setAutoPlayDuration(newAutoPlayDuration);
+  }, [autoPlayInterval, timeSliding]);
 
-      return () => clearTimeout(timer);
+  // update slide no. for header & active css class purpose
+  useEffect(() => {
+    if (pos === -1) {
+      setSlideNo(numItems);
+    } else if (pos === numItems) {
+      setSlideNo(1);
+    } else {
+      setSlideNo(pos + 1);
     }
-  }, [swiped, time, numItems]);
+  }, [pos, numItems]);
 
+  // Handle state of swiped around
   useEffect(() => {
     if (!swiped) {
       if (pos >= numItems) {
@@ -33,12 +60,13 @@ const Carousel = ({ slides, carouselStyle, slideStyle, timeSliding, slidingFunct
       }
     } else {
       if (pos === 0 || pos === numItems - 1) {
-        console.log("Czyszczę swiped dla pos = " + pos);
         setSwiped("");
       }
     }
   }, [pos, swiped, numItems]);
 
+  // if swiped around left => show first slide on right hand
+  // if swiped around right => show last slide on left hand
   useEffect(() => {
     ref.current.children[0].style.transform =
       swiped === "left" ? `translateX(${numItems}00%)` : "none";
@@ -46,45 +74,75 @@ const Carousel = ({ slides, carouselStyle, slideStyle, timeSliding, slidingFunct
       swiped === "right" ? `translateX(-${numItems}00%)` : "none";
   }, [swiped, numItems]);
 
+  // Go to begin or end once swiped around
+  useEffect(() => {
+    if (swiped) {
+      const timer = setTimeout(() => {
+        const newPos = swiped === "left" ? 0 : numItems - 1;
+        // ^^ swiped === "right" ? numItems - 1 ^^
+        resetTime();
+        goDesired(newPos);
+      }, time * 1000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [swiped, time, numItems]);
+
+  // Reset timer to previous value after swiped around
+  useEffect(() => {
+    let timer = null;
+    if (time === 0) {
+      timer = setTimeout(() => {
+        setTime(timeSliding);
+      }, 10);
+    }
+
+    return () => clearTimeout(timer);
+  }, [time, timeSliding]);
+
+  // show next slide
   const next = useCallback(() => {
     const newPos = (pos + 1) % (numItems + 1);
-    swiped && pos !== 0 ? setTime(0) : setTime(timeSliding);
-    console.log(
-      "Będzie ustawione newPos = " + newPos + " oraz swiped jest = " + swiped
-    );
-    setPos(newPos);
-  }, [pos, swiped, timeSliding, numItems]);
+    if (swiped) resetTime();
+    goDesired(newPos);
+  }, [pos, swiped, numItems]);
 
+  // show prev slide
   const prev = useCallback(() => {
-    const newPos =
-      pos === 0
-        ? -1
-        : pos === -1
-        ? numItems - 1
-        : Math.abs(pos - 1) % (numItems + 1);
-    swiped && pos !== numItems - 1 ? setTime(0) : setTime(timeSliding);
-    console.log(
-      "Będzie ustawione newPos = " + newPos + " oraz swiped jest = " + swiped
-    );
-    setPos(newPos);
-  }, [pos, swiped, timeSliding, numItems]);
+    const newPos = pos === 0 ? -1 : pos === -1 ? numItems - 1 : pos - 1;
+    if (swiped) resetTime();
+    goDesired(newPos);
+  }, [pos, swiped, numItems]);
 
+  // Autoplay slides functionality
   useEffect(() => {
     let intervalId = null;
 
     if (play) {
       intervalId = setInterval(() => {
-        next();
-      }, 3000);
+        !autoPlayReverse ? next() : prev();
+      }, autoPlayDuration * 1000);
     }
 
     return () => clearInterval(intervalId);
-  }, [play, next]);
+  }, [play, autoPlayDuration, autoPlayReverse, prev, next]);
 
+  // go to desired slide
+  const goDesired = (desired) => {
+    setPos(desired);
+  };
+
+  // reset time for sliding (needed for swipe around purpose)
+  const resetTime = () => {
+    setTime(0);
+  };
+
+  // handle click on play/pause button
   const handlePlay = () => {
     setPlay((play) => !play);
   };
 
+  // dynamic styles for animation
   let dynamicStyles = {
     transitionTimingFunction: slidingFunction,
     transitionDuration: `${time}s`,
@@ -100,22 +158,27 @@ const Carousel = ({ slides, carouselStyle, slideStyle, timeSliding, slidingFunct
               key={index}
               className={styles.item}
               style={{ ...slideStyle, backgroundImage: `url(${slide.src})` }}
-            ></div>
+            >{`POS: ${pos} slide: ${slideNo} numitems: ${numItems}`}</div>
           ))}
         </div>
 
         <div className={styles.controls}>
+          <div className={styles.header}>
+            <button className={styles.play} onClick={handlePlay}>
+              {play ? "❚❚" : "▶"}
+            </button>
+            <div>
+              {slideNo} / {numItems}
+            </div>
+          </div>
           <div className={styles.navigation}>
             <button className={styles.prev} onClick={prev}>
-              «
+              &#10094;
             </button>
             <button className={styles.next} onClick={next}>
-              »
+              &#10095;
             </button>
           </div>
-          <button className={styles.play} onClick={handlePlay}>
-            {play ? "❚❚" : "▶"}
-          </button>
         </div>
       </div>
     </>
@@ -123,10 +186,13 @@ const Carousel = ({ slides, carouselStyle, slideStyle, timeSliding, slidingFunct
 };
 
 Carousel.defaultProps = {
-  timeSliding : 1,
-  slidingFunction : "ease",
-  slideStyle : {},
-  carouselStyle : {},
+  timeSliding: 1,
+  slidingFunction: "ease",
+  slideStyle: {},
+  carouselStyle: {},
+  autoPlayStart: true,
+  autoPlayReverse: false,
+  autoPlayInterval: 3
 };
 
 export default Carousel;
