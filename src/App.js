@@ -2,7 +2,8 @@
 import React from "react";
 
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Navbar, LandingPage, Header, Socials, AboutUs, ScrollButton, Gallery } from './components';
+import { ScrollButton } from './components';
+import { LandingPage, Header, Socials, AboutUs, Navbar, Gallery, Videos } from './layouts'
 
 // import Carousel from 'react-gallery-carousel';
 // import 'react-gallery-carousel/dist/index.css';
@@ -19,6 +20,7 @@ function App() {
     <Socials />
     <AboutUs />
     <Gallery />
+    <Videos />
     <ScrollButton />
   </Router>
   );

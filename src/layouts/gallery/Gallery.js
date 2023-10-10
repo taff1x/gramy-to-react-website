@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Carousel } from './../../components'
+import { MyCarousel } from '../../components'
 
 import styles from './Gallery.module.css'
 
@@ -11,8 +11,9 @@ const slides = Array.from({ length: 37 }, (_, index) => index+1).map((number) =>
 
 const Gallery = () => {
   return (
-    <div className={styles.container}> 
-        <Carousel className={styles.container} slides={slides} slideStyle={{ backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}} carouselStyle={{ height: '600px', width: '900px' }}/>
+    <div className={styles.container}>
+        <h3>@GALERIA:</h3>
+        <MyCarousel slides={slides} />
     </div>
     
   )

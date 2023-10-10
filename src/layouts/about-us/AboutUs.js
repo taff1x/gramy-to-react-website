@@ -1,5 +1,8 @@
+
+import React from 'react'
 import { PersonCard } from "../../components";
 import musicians from "../../data/musicians.json"
+
 import styles from "./AboutUs.module.css";
 
 const AboutUs = () => {
@@ -22,7 +25,6 @@ const AboutUs = () => {
             />
           )
         }
-          
         ) 
       }
     </div>

@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    height: calc(100vh*0.8);
+    margin-bottom: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 90%;
+  }
+  
+  
+  .container h3 {
+    background: rgb(255,255,255);
+    background-clip: text;
+    background-image: var(--gradient-text);
+    color: transparent;
+    flex: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 1.2rem 0;
+    padding-bottom: 2rem;
+    text-decoration: underline;
+    text-decoration-color: var(--color-socials);
+    text-underline-offset: 0.25em;
+  }
+    
+  @media only screen and (min-width: 500px) and (max-width: 1280px) {
+    .container{
+      height: calc(100vw * 0.6);
+      max-height: 768px;
+    }
+    .container h3 {
+      font-size: 30px;
+    }
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    .container {
+      height: 768px;
+    }
+    .container h3 {
+      font-size: 30px;
+    }
+  }
