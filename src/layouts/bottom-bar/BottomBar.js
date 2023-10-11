@@ -16,7 +16,7 @@ const scrollToTop = () => {
 
 const BottomBar = () => {
   return (
-    <div className={styles["bottom-bar"]}>
+    <div className={styles["bottom-bar"]} id="contact">
       <div className={styles["bottom-bar-content"]}>
         <div className={styles["contact-info"]}>
           <a href="tel:+48508648037">

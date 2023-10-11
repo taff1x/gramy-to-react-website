@@ -13,7 +13,7 @@ import styles from './Videos.module.css'
 
 const Videos = () => {
   return (
-    <div className={styles["container"]}>
+    <div className={styles["container"]} id="videos">
       <h3>@WIDEO:</h3>
       <Carousel
         hasIndexBoard='topRight'
