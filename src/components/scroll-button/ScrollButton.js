@@ -11,7 +11,12 @@ const ScrollButton = () => {
   useEffect(() => {
     const handleVisible = () => {
       const scrolled = document.body.scrollTop || document.documentElement.scrollTop;
-      scrolled > 30 ? setVisible(true) : setVisible(false);
+      const offsetHeight = document.documentElement.offsetHeight;
+      const innerHeight = window.innerHeight;
+
+      const hasReachedBottom = offsetHeight - (innerHeight + scrolled) <= 60
+      
+      scrolled > 30 && !hasReachedBottom ? setVisible(true) : setVisible(false);
     };
 
     window.addEventListener('scroll', handleVisible);

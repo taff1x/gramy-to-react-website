@@ -1,0 +1,66 @@
+.bottom-bar {
+    align-items: center;
+    background-color: var(--color-footer);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .bottom-bar-content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+  
+  .social-links {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .contact-info > a,
+  .copyright-info {
+    align-items: center;
+    display: flex;
+    gap: 0.5em;
+  }
+
+  .contact-info a,
+  .social-links a,
+  .copyright-info a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    transition: transform 250ms;
+  }
+
+  .button-up {
+    margin-left: 1rem;
+    transition: transform 250ms;
+  }
+  
+  .button-up:hover,
+  .contact-info a:hover,
+  .social-links a:hover {
+    transform: scale(1.2) translateY(-5px);
+  }
+  
+  .contact-info span,
+  .copyright-info span {
+    color: white;
+    font-size: 14px;
+  }
+
+  /* Media query for small smartphones */
+@media only screen and (max-width: 600px) {  
+    /* Hide the number near the telephone icon and copyright section */
+    .contact-info span,
+    .copyright-info span,
+    .copyright-info > a {
+        display: none;
+    }
+}

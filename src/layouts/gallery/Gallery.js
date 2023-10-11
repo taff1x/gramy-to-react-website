@@ -11,7 +11,7 @@ const slides = Array.from({ length: 37 }, (_, index) => index+1).map((number) =>
 
 const Gallery = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="gallery">
         <h3>@GALERIA:</h3>
         <MyCarousel slides={slides} />
     </div>

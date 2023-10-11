@@ -12,7 +12,7 @@ const AboutUs = () => {
   }
 
   return (
-    <div className={styles["container"]}>
+    <div className={styles["container"]} id="about">
       {
         musicians.map( (musician) => {
           return (
