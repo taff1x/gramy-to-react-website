@@ -97,8 +97,8 @@
 
 .person p {
     color: white;
-    font-size: 1.5em;
-    line-height: 1.4em;
+    font-size: 1.4em;
+    line-height: 1.1em;
     text-align: center;
 }
 
@@ -146,4 +146,28 @@
 .back .img__container:before {
     background: navy;
     mix-blend-mode: lighten;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .person p {
+        font-size: 1.6em;
+        line-height: 1.2em;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .person p {
+        font-size: 1.4em;
+        line-height: 1.2em;
+    }
+}
+
+/* For Projectors or Higher Resolution Screens (Full HD) */
+@media screen and (min-width: 1920px) {
+    .person p {
+        font-size: 1.8em;
+        line-height: 1.2em;
+    }
 }

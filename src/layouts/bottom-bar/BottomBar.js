@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React, { useRef }from 'react'
+import { useIntersectionObserver } from '../../hooks';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faYoutube, faInstagram, faTiktok } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons"
@@ -14,9 +14,30 @@ const scrollToTop = () => {
   });
 };
 
-const BottomBar = () => {
+const BottomBar = ({ isScrolling, sectionName, setActiveSection }) => {
+  const contactRef = useRef(null);
+
+  // Use the custom hook to log when the Videos becomes visible
+  useIntersectionObserver(
+    isScrolling,
+    contactRef,
+    () => {
+      setActiveSection(sectionName);
+    },
+    1
+  );
+
   return (
-    <div className={styles["bottom-bar"]} id="contact">
+    <div className={styles["bottom-bar"]} id="contact" ref={contactRef}>
+      <div className={styles["bottom-bar-header"]}>
+        <p className={styles["text--gradient"]}>
+          Muzyczna przygoda czeka!<br />
+          Napisz i stwórz z nami unikalną ścieżkę dźwiękową Twojego wydarzenia!
+        </p>
+        <button onClick={() => window.location.href = 'mailto:kontakt@gramyto.pl'}>
+          Napisz do nas
+        </button>
+      </div>
       <div className={styles["bottom-bar-content"]}>
         <div className={styles["contact-info"]}>
           <a href="tel:+48508648037">

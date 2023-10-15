@@ -1,22 +1,31 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import { ImgCarousel } from '../../components';
+import { useIntersectionObserver } from '../../hooks';
+import styles from './Gallery.module.css';
 
-import { MyCarousel } from '../../components'
+const slides = Array.from({ length: 37 }, (_, index) => index + 1).map((number) => ({
+  src: require(`./../../assets/img/gallery/${number}.jpg`),
+}));
 
-import styles from './Gallery.module.css'
+const Gallery = ({ isScrolling, sectionName, setActiveSection }) => {
+  const galleryRef = useRef(null);
 
+  // Use the custom hook to log when the gallery becomes visible
+  useIntersectionObserver(
+    isScrolling,
+    galleryRef,
+    () => {
+      setActiveSection(sectionName);
+    },
+    0.8
+  );
 
-const slides = Array.from({ length: 37 }, (_, index) => index+1).map((number) => ({
-    src: require(`./../../assets/img/gallery/${number}.jpg`)
-  }));
-
-const Gallery = () => {
   return (
-    <div className={styles.container} id="gallery">
-        <h3>@GALERIA:</h3>
-        <MyCarousel slides={slides} />
+    <div className={styles.container} id="gallery" ref={galleryRef}>
+      <h3>@GALERIA:</h3>
+      <ImgCarousel slides={slides} />
     </div>
-    
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;
