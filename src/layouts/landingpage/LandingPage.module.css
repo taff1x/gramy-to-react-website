@@ -17,31 +17,28 @@
 }
 
 .image__frame {
-  border-radius: 40px;
-  overflow: hidden;
-  padding: .5rem .5rem;
+  color: #313149;
+  display: inline-block;
+  margin: 10px;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .image__frame:before {
-  background: var(--gradient-text) border-box; 
-  border: 8px solid transparent;
-  border-radius: inherit;
-  bottom: 0;
+  background: var(--gradient-text);
+  border-radius: 50% 0%;
   content: "";
-  left: 0;
+  inset: 0;
   -webkit-mask: 
-    conic-gradient(from -90deg at 5rem 5rem, white 25%, #0000 0) 0 0 / calc(100% - 5rem) calc(100% - 5rem) border-box,
-    conic-gradient(white 0 0) padding-box;
-  mask:
-    conic-gradient(from -90deg at 5rem 5rem, white 25%, #0000 0) 0 0 / calc(100% - 5rem) calc(100% - 5rem) border-box,
-    conic-gradient(white 0 0) padding-box;
-  -webkit-mask-composite: source-out;
-  mask-composite: exclude;
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+          mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  padding: 5px 5px 8px 0px;
   position: absolute;
-  right: 0;
-  top: 0;
   z-index: -1;
 }
 

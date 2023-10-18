@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { faCircleArrowUp }  from "@fortawesome/free-solid-svg-icons"
+import { faCircleChevronUp }  from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from './ScrollButton.module.css'
@@ -39,7 +39,7 @@ const ScrollButton = () => {
       style={{display: visible ? 'inline' : 'none'}}
       onClick={scrollToTop}
     >
-      <FontAwesomeIcon icon={faCircleArrowUp} size="2x" />
+      <FontAwesomeIcon icon={faCircleChevronUp} size="2x" />
     </button>
   );
 }
