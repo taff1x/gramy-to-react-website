@@ -1,0 +1,13 @@
+.mode-btn {
+    background-color: var(--color-decor);
+    border: none;
+    border-radius: 2px;
+    color: black;
+    cursor: pointer;
+    left: 5px;
+    outline: none;
+    padding: 5px;
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+}

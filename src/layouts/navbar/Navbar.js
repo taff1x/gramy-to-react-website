@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom';
 
-import { useIntersectionObserver } from '../../hooks';
+import { useIntersectionObserver, useTheme } from '../../hooks';
+import { DarkLightMode } from '../../components';
 import { HashLink as Link } from 'react-router-hash-link'
 import { Twirl as Hamburger } from 'hamburger-react'
 import { useMediaQuery } from 'react-responsive'
-import { ReactComponent as Logo } from '../../assets/icons/logo.svg'
+import { ReactComponent as LogoLight } from '../../assets/icons/logo.svg'
+import { ReactComponent as LogoDark } from '../../assets/icons/logo-dark.svg'
 
 
 import styles from "./Navbar.module.css"
@@ -18,7 +20,8 @@ const Navbar = ( { isScrolling, sectionName, setActiveSection, handleScrolling }
   const [isSticky, setIsSticky] = useState(false);
   const [hasReachedBottom, setHasReachedBottom] = useState(false);
   const isPhone = useMediaQuery({ query: '(max-width: 600px)' });
-  
+  const [theme, setTheme] = useTheme('dark');
+
   const navbarRef = useRef(null);
 
    // Use the custom hook to log when the Navbar becomes visible
@@ -76,13 +79,15 @@ const Navbar = ( { isScrolling, sectionName, setActiveSection, handleScrolling }
 
   return (
     <nav id="#home" className={styles['nav']} ref={navbarRef}>
+      <DarkLightMode curTheme={theme} handleTheme={setTheme} />
       <div className={styles['nav__container']}>
         <div className={styles['nav__logo']}>
           <Link
             to="#home"
             onClick={() => handleScrolling()}
           >
-            <Logo width={'100%'} height={'100%'} />
+            {theme === 'light' && <LogoLight width={'100%'} height={'100%'} />}
+            {theme === 'dark' && <LogoDark width={'100%'} height={'100%'} />}
           </Link>
         </div>
         <div className={cx('menu-icon', { 'sticky': isSticky && showNavbar})} onClick={handleShowNavbar}>

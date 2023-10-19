@@ -22,7 +22,7 @@ const Gallery = ({ isScrolling, sectionName, setActiveSection }) => {
 
   return (
     <div className={styles.container} id="gallery" ref={galleryRef}>
-      <h3>@GALERIA:</h3>
+      <h3>GALERIA:</h3>
       <ImgCarousel slides={slides} />
     </div>
   );

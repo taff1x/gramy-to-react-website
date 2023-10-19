@@ -9,7 +9,7 @@ import styles from "./Socials.module.css"
 const Socials = () => {
   return (
     <div className={`${styles['container']} ${styles['socials']}`}>
-      <h3>@OBSERWUJ NAS:</h3>
+      <h3>OBSERWUJ NAS:</h3>
       <a href="https://www.youtube.com/@gramyto9959" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faYoutube} size="2x" />
       </a>

@@ -1,24 +1,25 @@
 [
   {
     "id": 1,
-    "name": "Dawid",
-    "imgUrl": "assets/img/cards/Dawid.png",
-    "note": ["perkusja"],
-    "fullNote": "Dawid to nasz perkusista i mistrz rytmu. Współpracując z nim poczujesz, jak twoja muzyka zaczyna żyć. Niezależnie od gatunku, w którym się poruszamy, Dawid zawsze ma pomysł na to, jak rytmicznie podkreślić i wzbogacić każdy utwór. Poza sceną Dawid jest spokojnym i miłym człowiekiem, ale wystarczy, że weźmie w ręce pałki, a zaczyna dziać się magia."
-  },
-  {
-    "id": 2,
-    "name": "Marcin",
-    "imgUrl": "assets/img/cards/Marcin.png",
-    "note": ["gitara basowa"],
-    "fullNote": "Marcin jest naszym basistą i charyzmatycznym liderem zespołu. To on wprowadza nas w nastrój i zawsze ma pomysł na to, jak sprawić, żeby nasza muzyka brzmiała wyjątkowo. Znają go wszystkie dziewczyny z okolicy, ale jego serce jest już zajęte. Niezależnie od tego, czy grasz z nim na scenie czy po prostu gadacie na luzie, zawsze masz poczucie, że jesteś w dobrych rękach."
-  },
-  {
-    "id": 3,
     "name": "Mariusz",
     "imgUrl": "assets/img/cards/Mariusz.png",
     "note": ["gitara", "trąbka", "wokal"],
     "fullNote": "Mariusz to nasz multiinstrumentalista i wokalista, który potrafi wszystko: od jazzu przez rock po klasyczną muzykę. To dzięki niemu nasza muzyka nabiera jeszcze większego rozmachu i różnorodności. Mariusz jest niesamowicie kreatywny i zawsze ma pomysł na to, jak urozmaicić nasze występy. Poza sceną Mariusz jest ciepłym i serdecznym człowiekiem, który zawsze potrafi rozśmieszyć swoim poczuciem humoru."
+  },
+  {
+    "id": 2,
+    "name": "Ola",
+    "imgUrl": "assets/img/cards/Ola.png",
+    "note": ["wokal","gitara","flet"],
+    "fullNote": "Jako wykwalifikowana pianistka i wokalistka, zdobyłam doświadczenie w różnych stylach muzycznych, w tym jazzie, klasycznej muzyce i popie. Mam zdolność do pracy z zespołem i improwizacji w czasie występów na żywo, a także nagrywania studyjnego. Moje występy charakteryzują się eleganckim stylem i wysokim poziomem artystycznym."
+  },
+  {
+    
+    "id": 3,
+    "name": "Dawid",
+    "imgUrl": "assets/img/cards/Dawid.png",
+    "note": ["perkusja"],
+    "fullNote": "Dawid to nasz perkusista i mistrz rytmu. Współpracując z nim poczujesz, jak twoja muzyka zaczyna żyć. Niezależnie od gatunku, w którym się poruszamy, Dawid zawsze ma pomysł na to, jak rytmicznie podkreślić i wzbogacić każdy utwór. Poza sceną Dawid jest spokojnym i miłym człowiekiem, ale wystarczy, że weźmie w ręce pałki, a zaczyna dziać się magia."
   },
   {
     "id": 4,
@@ -29,10 +30,10 @@
   },
   {
     "id": 5,
-    "name": "Ola",
-    "imgUrl": "assets/img/cards/Ola.png",
-    "note": ["wokal","gitara","flet"],
-    "fullNote": "Jako wykwalifikowana pianistka i wokalistka, zdobyłam doświadczenie w różnych stylach muzycznych, w tym jazzie, klasycznej muzyce i popie. Mam zdolność do pracy z zespołem i improwizacji w czasie występów na żywo, a także nagrywania studyjnego. Moje występy charakteryzują się eleganckim stylem i wysokim poziomem artystycznym."
+    "name": "Marcin",
+    "imgUrl": "assets/img/cards/Marcin.png",
+    "note": ["gitara basowa"],
+    "fullNote": "Marcin jest naszym basistą i charyzmatycznym liderem zespołu. To on wprowadza nas w nastrój i zawsze ma pomysł na to, jak sprawić, żeby nasza muzyka brzmiała wyjątkowo. Znają go wszystkie dziewczyny z okolicy, ale jego serce jest już zajęte. Niezależnie od tego, czy grasz z nim na scenie czy po prostu gadacie na luzie, zawsze masz poczucie, że jesteś w dobrych rękach."
   },
   {
     "id": 6,

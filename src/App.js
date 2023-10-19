@@ -11,7 +11,7 @@ function App() {
 
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolling, setIsScrolling] = useState(false);
-  
+
   useUpdateHash(activeSection);
 
   const handleScrolling = () => {

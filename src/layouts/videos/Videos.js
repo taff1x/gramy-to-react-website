@@ -41,7 +41,7 @@ const Videos = ({ isScrolling, sectionName, setActiveSection }) => {
 
   return (
     <div className={styles['container']} id="videos" ref={videosRef}>
-      <h3>@WIDEO:</h3>
+      <h3>WIDEO:</h3>
       <Carousel
         hasIndexBoard="topRight"
         hasSizeButton="bottomRight"

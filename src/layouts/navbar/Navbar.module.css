@@ -3,7 +3,6 @@
   box-shadow: 0 1px 3px rgba(214, 201, 201, 0.15);
   font-size: 20px;
   height: 70px;
-  /* position: relative; */
 }
 
 .nav a {
@@ -12,6 +11,7 @@
 
 .nav__container {
   align-items: center;
+  align-self: center;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -40,12 +40,13 @@
 }
 
 .nav__links ul {
+  align-items: center;
   display: grid;
   gap: 0.2em;
   grid-template-areas: "ab gal vid con";
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   white-space: nowrap;
 }
 
