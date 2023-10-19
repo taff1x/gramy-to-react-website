@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/gramy-to-react-website/precache-manifest.40d40dc3378f8a4f794c2a1c809ba010.js"
+  "/gramy-to-react-website/precache-manifest.cd4ae42da1dbbd4061c8ea6d625a9e14.js"
 );
 
 self.addEventListener('message', (event) => {

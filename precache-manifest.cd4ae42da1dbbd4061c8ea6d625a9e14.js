@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d8b0b582877eaf578078a5c4a79e5668",
+    "revision": "b828d04e06588deef08386435523ab44",
     "url": "/gramy-to-react-website/index.html"
   },
   {
-    "revision": "9fe7ffa53abc70096b21",
+    "revision": "660adb373cbb3b53cda9",
     "url": "/gramy-to-react-website/static/css/2.80f89dfb.chunk.css"
   },
   {
-    "revision": "062985fc5b5077d1fc4b",
-    "url": "/gramy-to-react-website/static/css/main.2dd7c1b3.chunk.css"
+    "revision": "1ac8399d78efd47dc7d1",
+    "url": "/gramy-to-react-website/static/css/main.0ca32a94.chunk.css"
   },
   {
-    "revision": "9fe7ffa53abc70096b21",
-    "url": "/gramy-to-react-website/static/js/2.8543a35f.chunk.js"
+    "revision": "660adb373cbb3b53cda9",
+    "url": "/gramy-to-react-website/static/js/2.5cea602f.chunk.js"
   },
   {
     "revision": "f7d5cf260f8ea9504d579b89b79a931e",
-    "url": "/gramy-to-react-website/static/js/2.8543a35f.chunk.js.LICENSE.txt"
+    "url": "/gramy-to-react-website/static/js/2.5cea602f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "062985fc5b5077d1fc4b",
-    "url": "/gramy-to-react-website/static/js/main.76152964.chunk.js"
+    "revision": "1ac8399d78efd47dc7d1",
+    "url": "/gramy-to-react-website/static/js/main.b863b4f1.chunk.js"
   },
   {
     "revision": "f116b12291ded116f337",
@@ -206,6 +206,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "af73b9b7eb71cc90d7c16d9a38f550c1",
     "url": "/gramy-to-react-website/static/media/gt-landing-transparent.af73b9b7.png"
+  },
+  {
+    "revision": "6a4cc8bb0804b2fce45d49e0271109a2",
+    "url": "/gramy-to-react-website/static/media/logo-dark.6a4cc8bb.svg"
   },
   {
     "revision": "1521fa786c2d17fc8b0179a69458984e",

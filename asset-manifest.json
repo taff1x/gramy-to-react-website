@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/gramy-to-react-website/static/css/main.2dd7c1b3.chunk.css",
-    "main.js": "/gramy-to-react-website/static/js/main.76152964.chunk.js",
-    "main.js.map": "/gramy-to-react-website/static/js/main.76152964.chunk.js.map",
+    "main.css": "/gramy-to-react-website/static/css/main.0ca32a94.chunk.css",
+    "main.js": "/gramy-to-react-website/static/js/main.b863b4f1.chunk.js",
+    "main.js.map": "/gramy-to-react-website/static/js/main.b863b4f1.chunk.js.map",
     "runtime-main.js": "/gramy-to-react-website/static/js/runtime-main.787042e9.js",
     "runtime-main.js.map": "/gramy-to-react-website/static/js/runtime-main.787042e9.js.map",
     "static/css/2.80f89dfb.chunk.css": "/gramy-to-react-website/static/css/2.80f89dfb.chunk.css",
-    "static/js/2.8543a35f.chunk.js": "/gramy-to-react-website/static/js/2.8543a35f.chunk.js",
-    "static/js/2.8543a35f.chunk.js.map": "/gramy-to-react-website/static/js/2.8543a35f.chunk.js.map",
+    "static/js/2.5cea602f.chunk.js": "/gramy-to-react-website/static/js/2.5cea602f.chunk.js",
+    "static/js/2.5cea602f.chunk.js.map": "/gramy-to-react-website/static/js/2.5cea602f.chunk.js.map",
     "index.html": "/gramy-to-react-website/index.html",
-    "precache-manifest.40d40dc3378f8a4f794c2a1c809ba010.js": "/gramy-to-react-website/precache-manifest.40d40dc3378f8a4f794c2a1c809ba010.js",
+    "precache-manifest.cd4ae42da1dbbd4061c8ea6d625a9e14.js": "/gramy-to-react-website/precache-manifest.cd4ae42da1dbbd4061c8ea6d625a9e14.js",
     "service-worker.js": "/gramy-to-react-website/service-worker.js",
     "static/css/2.80f89dfb.chunk.css.map": "/gramy-to-react-website/static/css/2.80f89dfb.chunk.css.map",
-    "static/css/main.2dd7c1b3.chunk.css.map": "/gramy-to-react-website/static/css/main.2dd7c1b3.chunk.css.map",
-    "static/js/2.8543a35f.chunk.js.LICENSE.txt": "/gramy-to-react-website/static/js/2.8543a35f.chunk.js.LICENSE.txt",
+    "static/css/main.0ca32a94.chunk.css.map": "/gramy-to-react-website/static/css/main.0ca32a94.chunk.css.map",
+    "static/js/2.5cea602f.chunk.js.LICENSE.txt": "/gramy-to-react-website/static/js/2.5cea602f.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/gramy-to-react-website/static/media/1.810c4f40.jpg",
     "static/media/10.jpg": "/gramy-to-react-website/static/media/10.2ecc8f2e.jpg",
     "static/media/11.jpg": "/gramy-to-react-website/static/media/11.42bbdf5c.jpg",
@@ -59,14 +59,15 @@
     "static/media/Robert.png": "/gramy-to-react-website/static/media/Robert.d3e005b2.png",
     "static/media/blob.svg": "/gramy-to-react-website/static/media/blob.f47b5a62.svg",
     "static/media/gt-landing-transparent.png": "/gramy-to-react-website/static/media/gt-landing-transparent.af73b9b7.png",
+    "static/media/logo-dark.svg": "/gramy-to-react-website/static/media/logo-dark.6a4cc8bb.svg",
     "static/media/logo.svg": "/gramy-to-react-website/static/media/logo.1521fa78.svg",
     "static/media/waves.svg": "/gramy-to-react-website/static/media/waves.b0a4843b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.787042e9.js",
     "static/css/2.80f89dfb.chunk.css",
-    "static/js/2.8543a35f.chunk.js",
-    "static/css/main.2dd7c1b3.chunk.css",
-    "static/js/main.76152964.chunk.js"
+    "static/js/2.5cea602f.chunk.js",
+    "static/css/main.0ca32a94.chunk.css",
+    "static/js/main.b863b4f1.chunk.js"
   ]
 }
