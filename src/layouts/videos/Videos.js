@@ -18,7 +18,7 @@ const Videos = ({ isScrolling, sectionName, setActiveSection }) => {
     () => {
       setActiveSection(sectionName);
     },
-    1
+    1.0
   );
 
   useEffect(() => {
@@ -29,8 +29,8 @@ const Videos = ({ isScrolling, sectionName, setActiveSection }) => {
     setRefsById(refs);
   }, []);
 
-  const stopAllVideos = ({curIndex}) => {
-    console.log('Stopping all videos');
+  const stopAllVideos = (curIndex) => {
+    console.log('VideoCurIndex = ' + curIndex)
     Object.values(refsById).forEach((ref) => {
       if (ref.current && ref.current.id !== `videoNo-${curIndex}`) {
         const stopVideo = ref.current.src
@@ -49,7 +49,7 @@ const Videos = ({ isScrolling, sectionName, setActiveSection }) => {
         hasDotButtons="bottom"
         hasThumbnails={false}
         className={styles['carousel-background']}
-        onIndexChange={stopAllVideos}
+        onIndexChange={({curIndex}) => stopAllVideos(curIndex)}
       >
         {videosList.map((video) => (
           <Youtube key={video.id} videoNo={video.id} embedId={video.embedId} ref={refsById[video.id]} />
